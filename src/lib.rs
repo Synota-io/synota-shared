@@ -163,6 +163,11 @@ pub struct SynotaLoginResponse {
     pub error_msg: String,
 }
 
+#[derive(Debug, Deserialize, Serialize)]
+pub struct SynotaMigrateUpRequest {
+    pub node_secret_key: String,
+}
+
 pub fn base64encode(data: &[u8]) -> String {
     base64::encode_config(data, base64::STANDARD)
 }
